@@ -1,0 +1,168 @@
+html {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: linear-gradient(
+        to top,
+        #1e3c72 0%,
+        #1e3c72 1%,
+        #2a5298 100%
+    );
+    font-family: "Montserrat", sans-serif;
+    min-height: 100%;
+}
+h1 {
+    font-weight: 400;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+
+.contenido {
+    background-color: white;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenedor > div {
+        flex: 1 0 50%;
+    }
+}
+.formulario-busqueda p {
+    text-align: center;
+}
+.formulario-busqueda span {
+    color: red;
+}
+
+.input {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.input label {
+    flex: 0 0 120px;
+    text-align: right;
+    margin-right: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.input span {
+    color: red;
+}
+.input input[type="text"] {
+    height: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+}
+.enviar {
+    text-align: right;
+    justify-content: flex-end !important;
+}
+.input input[type="submit"] {
+    background-color: #6f86d6;
+    padding: 0.5rem 2rem;
+    color: white;
+    align-self: flex-end;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+.input input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #384e9d;
+}
+
+.error {
+    padding: 1rem;
+    border: 1px solid red;
+    background-color: rgb(249, 121, 121);
+    color: white;
+    text-align: center;
+}
+
+#resultado {
+    white-space: pre-wrap;
+    padding: 2rem;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: sk-rotate 2s infinite linear;
+    animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
